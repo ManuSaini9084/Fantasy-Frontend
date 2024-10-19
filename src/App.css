@@ -1,38 +1,190 @@
-.App {
+/* src/App.css */
+
+body {
+  margin: 1%;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #283739;
+  background-color: #99ddcc;
+}
+
+
+.header {
   text-align: center;
+  margin-bottom: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.io {
+  list-style-type: style none;
+  ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header h1 {
+
+  font-size: 28px;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content {
+
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.matches,
+.teams,
+.players,
+.tea {
+  background-color: #f7f7f2;
+  padding: 5px;
+  width: 100%;
+  overflow: hidden;
+  font-size: medium;
+  margin: 1%;
+  border-radius: 8px;
+  border-radius: 20px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.button {
+  background-color: #00adb5;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #007580;
+}
+
+/* App.css */
+
+.matches {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+
+}
+
+.team-creation input[type="checkbox"] {
+  transform: scale(1.5);
+  display: block;
+
+}
+
+.matches h2 {
+  color: #00adb5;
+  margin-top: 0;
+}
+
+.matches ul {
+  list-style: none;
+  padding: 0;
+}
+
+.matches li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.matches li:last-child {
+  border-bottom: none;
+}
+
+
+.players h2 {
+  color: #00adb5;
+  margin-top: 0;
+}
+
+.players ul {
+  list-style: none;
+  padding: 0;
+}
+
+.players li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.players li:last-child {
+  border-bottom: none;
+}
+
+.team-display {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.team-display h2 {
+  color: #00adb5;
+  margin-top: 0;
+}
+
+.team-display ul {
+  list-style: none;
+  padding: 0;
+}
+
+.team-display li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.team-display li:last-child {
+  border-bottom: none;
+}
+
+.team-creation {
+  background-color: #f7f7f2;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.team-creation h2 {
+  color: #00adb5;
+  margin-top: 0;
+}
+
+.team-creation label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.team-creation input[type="text"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.team-creation ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+
+.team-creation button {
+  background-color: #00adb5;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.team-creation button:hover {
+  background-color: #007580;
 }

@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+//App.js
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import React from 'react';
+import Matches from './Matches';
+import Teams from './Teams';
+import Players from './Players';
+import './App.css';
+import TeamCreation from './TeamCreation';
+
+const App = () => {
+    return (
+        <div className="container">
+            <div className="header">
+                <h1>Fantasy Sports App</h1>
+            </div>
+            <div className="content">
+                <div className="matches">
+                    <Matches />
+                </div>
+                <div className="teams">
+                    <Teams />
+                </div>
+                <div className="players">
+                    <Players />
+                </div>
+                <div className="tea">
+                    <TeamCreation />
+                </div>
+            </div>
+        </div>
+    );
+};
 
 export default App;
