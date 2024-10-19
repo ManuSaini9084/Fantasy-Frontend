@@ -18,7 +18,7 @@ const Players = () => {
 
     const fetchPlayers = async () => {
         try {
-            const response = await axios.get("http://localhost:5000/players");
+            const response = await axios.get("https://fantasy-backend-wg63.onrender.com/players");
             setPlayers(response.data);
             setLoading(false);
         } catch (error) {
@@ -38,7 +38,7 @@ const Players = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:5000/players", formData);
+            await axios.post("https://fantasy-backend-wg63.onrender.com/players", formData);
             setFormData({
                 name: "",
                 score: 0,

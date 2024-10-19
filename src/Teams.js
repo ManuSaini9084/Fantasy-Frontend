@@ -12,7 +12,7 @@ const Team = () => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:5000/teams")
+            .get("https://fantasy-backend-wg63.onrender.com/teams")
             .then((response) => {
                 setTeams(response.data);
                 setLoading(false);
@@ -34,11 +34,11 @@ const Team = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:5000/teams", formData);
+            await axios.post("https://fantasy-backend-wg63.onrender.com/teams", formData);
             setFormData({
                 name: "",
             });
-            const updatedResponse = await axios.get("http://localhost:5000/teams");
+            const updatedResponse = await axios.get("https://fantasy-backend-wg63.onrender.com/teams");
             setTeams(updatedResponse.data);
         } catch (error) {
             console.error("Error creating team:", error);

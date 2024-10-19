@@ -17,7 +17,7 @@ const TeamCreation = () => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:5000/players")
+            .get("https://fantasy-backend-wg63.onrender.com/players")
             .then((response) => {
                 setPlayers(response.data);
                 setLoading(false);
@@ -112,7 +112,7 @@ const TeamCreation = () => {
         };
 
         axios
-            .post("http://localhost:5000/teams", newTeam)
+            .post("https://fantasy-backend-wg63.onrender.com/teams", newTeam)
             .then((response) => {
                 alert("Team created successfully!");
                 setSelectedPlayers([]);

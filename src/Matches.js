@@ -18,8 +18,8 @@ const Matches = () => {
     useEffect(() => {
         const fetchMatchesAndTeams = async () => {
             try {
-                const matchResponse = await axios.get("http://localhost:5000/matches");
-                const teamResponse = await axios.get("http://localhost:5000/teams");
+                const matchResponse = await axios.get("https://fantasy-backend-wg63.onrender.com/matches");
+                const teamResponse = await axios.get("https://fantasy-backend-wg63.onrender.com/teams");
                 setMatches(matchResponse.data);
                 setTeams(teamResponse.data);
                 setLoading(false);
@@ -42,7 +42,7 @@ const Matches = () => {
     const handleCreateMatch = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:5000/matches", {
+            const response = await axios.post("https://fantasy-backend-wg63.onrender.com/matches", {
                 date: newMatch.date,
                 teams: [newMatch.team1, newMatch.team2],
                 winner: newMatch.winner,
